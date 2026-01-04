@@ -1,0 +1,84 @@
+/* ================= THEME VARIABLES ================= */
+[data-theme="light"] {
+    --bg: #f0f0f0;
+    --card: #ffffff;
+    --text: #333333;
+    --muted: #888888;
+    --brand: #ff69b4;
+    --accent: #87ceeb;
+    --success: #32cd32;
+    --border: #dddddd;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+    --bg: #0a0a0a;
+    --card: rgba(255, 255, 255, 0.05);
+    --text: #e0e0e0;
+    --muted: #a0a0a0;
+    --brand: #ff00ff;
+    --accent: #00ffff;
+    --success: #00ff00;
+    --border: rgba(255, 255, 255, 0.1);
+    --shadow: 0 0 20px rgba(255, 0, 255, .3);
+}
+
+/* ================= FONT ================= */
+body {
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* ================= OVERLAYS ================= */
+#grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    background: url(https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExamo0dnlkOWRpeXVscjVnZmJtZ2huM3JnYjRjMjlxazA3Y3l0dG55eSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/l1J9sZ1t5B1g3w62I/giphy.gif);
+    opacity: 0.05;
+}
+
+#vignette-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998;
+    box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.5);
+}
+
+/* ================= CHARACTER ================= */
+.character-container {
+    position: relative;
+}
+
+#characterMascot {
+    width: 100%;
+    max-width: 400px;
+    animation: float 3s ease-in-out infinite;
+}
+
+.dialogue-box {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 1rem;
+    border-radius: 10px;
+    opacity: 0;
+    scale: 0;
+    transition: opacity 0.3s, scale 0.3s;
+}
+
+.footer-character {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+}
